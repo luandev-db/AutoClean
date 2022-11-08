@@ -100,7 +100,7 @@
                 </ui:NavigationStore.Footer>
             </ui:NavigationStore>
 
-            <!--  We display our pages inside this element.  -->
+            <!--  Exibimos nossas páginas dentro desse elemento.  -->
             <Border
                 Grid.Column="1"
                 Background="{DynamicResource ControlFillColorDefaultBrush}"
