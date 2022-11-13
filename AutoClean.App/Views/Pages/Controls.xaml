@@ -114,7 +114,7 @@
             Margin="0,24,0,0"
             Foreground="{DynamicResource TextFillColorSecondaryBrush}"
             Text="WPF UI CardControl" />
-        <ui:CardControl Margin="0,8,0,0" Icon="Whiteboard24">
+        <ui:CardControl Margin="0,8,0,0" Icon="Whiteboard24" Click="CardControl_Click">
             <ui:CardControl.Header>
                 <StackPanel Grid.Column="0" VerticalAlignment="Center">
                     <TextBlock
@@ -127,7 +127,7 @@
                         Text="Stylized card with control on the right." />
                 </StackPanel>
             </ui:CardControl.Header>
-            <ui:ToggleSwitch />
+            <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
         </ui:CardControl>
         <ui:CodeBlock Margin="0,8,0,0">
             &lt;ui:CardControl Icon=&quot;Whiteboard24&quot; /&gt;

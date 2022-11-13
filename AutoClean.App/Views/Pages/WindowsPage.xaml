@@ -1,0 +1,470 @@
+﻿<ui:UiPage x:Class="AutoClean.App.Views.Pages.WindowsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoClean.App.Views.Pages"
+      xmlns:ui="clr-namespace:Wpf.Ui.Controls;assembly=Wpf.Ui"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WindowsPage">
+
+    <VirtualizingStackPanel
+        x:Name="RootPanel"
+        Margin="18,0,18,18"
+        IsVirtualizing="True"
+        VirtualizationMode="Recycling">
+        <TextBlock
+            Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+            Text="WPF UI adds a number of new, modern controls that can help you build stunning applications for Windows Presentation Foundation."
+            TextWrapping="WrapWithOverflow" />
+
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="0">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Cortana" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Habilitar ou Desabilitar" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="EnableCortana"/>
+                
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="1">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="1"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="2">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="3">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="0">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="1">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="1"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="2">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="3">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="0">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="1">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="1"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="2">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="3">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="0">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="1">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="1"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="2">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="3">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="0">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="1">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="1"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="2">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="CardControl_Click"
+                            Grid.Column="3">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="CardControl" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Stylized card with control on the right." />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="ToggleSwitch_Checked" />
+            </ui:CardControl>
+        </Grid>
+        
+    </VirtualizingStackPanel>
+</ui:UiPage>

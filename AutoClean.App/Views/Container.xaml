@@ -61,7 +61,7 @@
                     <ui:NavigationItem
                         Content="Windows"
                         Icon="WindowSettings20"
-                        PageType="{x:Type pages:Controls}" />
+                        PageType="{x:Type pages:WindowsPage}" />
                     <!--
                     <ui:NavigationHeader Icon="Fluent24" Text="Header" />
                     -->
@@ -72,7 +72,7 @@
                         PageType="{x:Type pages:Input}" />
                     <ui:NavigationItem
                         Content="Sistema"
-                        Icon="System24"
+                        Icon="DesktopPulse20"
                         PageType="{x:Type pages:Data}" Cursor="Hand" />
                     <ui:NavigationItem
                         Content="Utilitários"
@@ -142,7 +142,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
-            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="-130,0,0,0">
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="-100,0,0,0">
                 <ui:ProgressRing IsIndeterminate="True" />
                 <TextBlock
                     Margin="0,12,0,0"
@@ -177,7 +177,7 @@
             d:Visibility="Visible"
             IsFocusIndicatorEnabled="False"
             IsHitTestVisible="False"
-            Visibility="Visible" />
+            Visibility="Visible" Loaded="DebuggingLayer_Loaded" />
 
         <!--  The title bar contains window navigation elements and some Tray related extras.  -->
         <!--  You can put additional controls in the header, such as a search bar.  -->

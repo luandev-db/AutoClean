@@ -104,11 +104,11 @@
                         Margin="0"
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Input" />
+                        Text="Windows" />
                     <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Form inputs" />
+                        Text="Ajustes do Windows" />
                 </StackPanel>
             </ui:CardAction>
 
@@ -124,11 +124,11 @@
                         Margin="0"
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Controls" />
+                        Text="Rede" />
                     <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Fluent &amp; Modern" />
+                        Text="Ajustes de rede" />
                 </StackPanel>
             </ui:CardAction>
 
@@ -144,11 +144,11 @@
                         Margin="0"
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Colors" />
+                        Text="Sistema" />
                     <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Themes &amp; Palette" />
+                        Text="Ajustes do Sistema" />
                 </StackPanel>
             </ui:CardAction>
 
@@ -164,11 +164,11 @@
                         Margin="0"
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Icons" />
+                        Text="Utilitários" />
                     <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Fluent System Icons" />
+                        Text="Utilitários AutoClean" />
                 </StackPanel>
             </ui:CardAction>
 

@@ -106,4 +106,14 @@ public partial class Controls
     {
         (sender as Wpf.Ui.Controls.MessageBox)?.Close();
     }
+
+    private void CardControl_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
+    {
+
+    }
 }

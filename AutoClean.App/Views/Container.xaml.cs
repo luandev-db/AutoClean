@@ -169,5 +169,10 @@ public partial class Container : INavigationWindow
             right: 0,
             bottom: 0);
     }
+
+    private void DebuggingLayer_Loaded(object sender, RoutedEventArgs e)
+    {
+
+    }
 }
 

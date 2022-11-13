@@ -74,7 +74,7 @@ public partial class App
             services.AddScoped<ExperimentalDashboard>();
             services.AddScoped<ExperimentalViewModel>();
 
-            services.AddScoped<Controls>();
+            services.AddScoped<WindowsPage>();
 
             services.AddScoped<Menus>();
 
