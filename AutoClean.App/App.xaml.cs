@@ -35,6 +35,7 @@ public partial class App
         .CreateDefaultBuilder()
         .ConfigureAppConfiguration(c => { c.SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()!.Location)); })
         .ConfigureServices((context, services) =>
+        
         {
             // App Host
             services.AddHostedService<ApplicationHostService>();

@@ -113,9 +113,13 @@ public class ColorsViewModel : ObservableObject, INavigationAware
         set => SetProperty(ref _columns, value);
     }
 
+#pragma warning disable CS8622 // A nulidade de tipos de referência no tipo de parâmetro 'parameter' de 'void ColorsViewModel.OnCopyColor(string parameter)' não corresponde ao delegado de destino 'Action<string?>' (possivelmente devido a atributos de nulidade).
     public ICommand CopyColorCommand => _copyColorCommand ??= new RelayCommand<string>(OnCopyColor);
+#pragma warning restore CS8622 // A nulidade de tipos de referência no tipo de parâmetro 'parameter' de 'void ColorsViewModel.OnCopyColor(string parameter)' não corresponde ao delegado de destino 'Action<string?>' (possivelmente devido a atributos de nulidade).
 
+#pragma warning disable CS8618 // O campo não anulável '_copyColorCommand' precisa conter um valor não nulo ao sair do construtor. Considere declarar o campo como anulável.
     public ColorsViewModel()
+#pragma warning restore CS8618 // O campo não anulável '_copyColorCommand' precisa conter um valor não nulo ao sair do construtor. Considere declarar o campo como anulável.
     {
         Wpf.Ui.Appearance.Theme.Changed += OnThemeChanged;
     }

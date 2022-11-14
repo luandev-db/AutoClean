@@ -1,50 +1,80 @@
-﻿using System.Windows;
+﻿// This Source Code Form is subject to the terms of the MIT License.
+// If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
+// Copyright (C) Leszek Pomianowski and WPF UI Contributors.
+// All Rights Reserved.
+
+using System;
+using System.Diagnostics;
+using System.Linq.Expressions;
+using System.Runtime;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using AutoClean.App.ViewModels;
 using Microsoft.Win32;
+using Wpf.Ui.Common;
+using Wpf.Ui.Controls;
+using Wpf.Ui.Controls.Interfaces;
+using Wpf.Ui.Mvvm.Contracts;
+using AutoClean.App.Services;
+using System.IO;
 
+namespace AutoClean.App.Views.Pages;
 
-namespace AutoClean.App.Views.Pages
+/// <summary>
+/// Interaction logic for Input.xaml
+/// </summary>
+public partial class WindowsPage
 {
-    /// <summary>
-    /// Interação lógica para WindowsPage.xam
-    /// </summary>
-    public partial class WindowsPage 
+    private readonly ISnackbarService _snackbarService;
+
+    private readonly IDialogControl _dialogControl;
+
+
+    public WindowsPage(ISnackbarService snackbarService, IDialogService dialogService)
     {
-        public WindowsPage()
+        InitializeComponent();
+
+        _snackbarService = snackbarService;
+        _dialogControl = dialogService.GetDialogControl();
+    }
+    public void DisableCortana(object sender, RoutedEventArgs e)
+    {
+        ToggleSwitch toggleSwitch = sender as ToggleSwitch;
+        string checkState;
+        var Search = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search", true);
+        var WindowsSearch = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search", true);
+
+
+        if (toggleSwitch.IsChecked == true)
         {
-            InitializeComponent();
+            checkState = "Cortana Desativada";
+            Search.SetValue("AllowCortana", 0);
+            Search.SetValue("BingSearchEnabled", 0);
+            Search.SetValue("CortanaConsent", 0);
+            WindowsSearch.SetValue("AllowCloudSearch", 0);
         }
-        public void EnableCortana(object sender, RoutedEventArgs e)
+        else
         {
-
-
+            checkState = "Cortana Ativada";
+            Search.SetValue("AllowCortana", 1);
+            Search.SetValue("BingSearchEnabled", 1);
+            Search.SetValue("CortanaConsent", 1);
+            WindowsSearch.SetValue("AllowCloudSearch", 1);
 
 
         }
-        private void CardControl_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-        private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
-        {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Search", true);
-            Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search", "AllowCortana", "1", RegistryValueKind.DWord);
-            Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search", "DisableWebSearch", "0", RegistryValueKind.DWord);
-            Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search", "ConnectedSearchUseWeb", "1", RegistryValueKind.DWord);
-            Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search", "ConnectedSearchUseWebOverMeteredConnections", "1", RegistryValueKind.DWord);
+        _snackbarService.Show(string.Format(checkState, SymbolRegular.FoodCake24, ControlAppearance.Success));
+    }
 
-            Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search", "HistoryViewEnabled", "1", RegistryValueKind.DWord);
-            Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search", "DeviceHistoryEnabled", "1", RegistryValueKind.DWord);
 
-            Registry.SetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search", "AllowSearchToUseLocation", "1", RegistryValueKind.DWord);
-            Registry.SetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search", "BingSearchEnabled", "1", RegistryValueKind.DWord);
-            Registry.SetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search", "CortanaConsent", "1", RegistryValueKind.DWord);
-            Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search", "AllowCloudSearch", "1", RegistryValueKind.DWord);
-            key.Close();
-        }
 
-        private void DisableCortana(object sender, RoutedEventArgs e)
-        {
-            
-        }
+    private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
+    {
+
     }
 }
+       
+
+     

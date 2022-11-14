@@ -127,7 +127,7 @@
                         Appearance="Secondary"
                         CloseButtonEnabled="True"
                         Icon="PuzzlePiece24"
-                        Message="Remember that the Heat Death of Universe is coming someday, no time to explain - let's go!"
+                        Message=""
                         Timeout="5000" />
                 </Grid>
             </Border>

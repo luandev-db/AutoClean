@@ -90,4 +90,8 @@
     <Resource Include="Resources\the_witcher_wallpaper.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Regfiles\" />
+  </ItemGroup>
+
 </Project>
