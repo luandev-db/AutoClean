@@ -45,11 +45,36 @@
                         Text="Habilitar ou Desabilitar" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch Checked="DisableCortana" Unchecked="DisableCortana" Foreground="{DynamicResource TextFillColorTertiaryBrush}" >
-                    
-                        
-                    
-                </ui:ToggleSwitch>
+                <ui:ToggleSwitch Checked="DisableCortana" Unchecked="DisableCortana" />
+
+
+
+
+
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Whiteboard24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="1">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Cortana" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Habilitar ou Desabilitar" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch Checked="DisableCortana" Unchecked="DisableCortana" />
+
+
+
+
 
             </ui:CardControl>
         </Grid>

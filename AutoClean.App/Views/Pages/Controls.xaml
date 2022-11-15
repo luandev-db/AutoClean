@@ -36,7 +36,7 @@
                 Margin="0,0,4,0"
                 Click="ButtonAction_OnClick"
                 Icon="CommentMultiple24"
-                Tag="snackbar">
+                Tag="snackbar" Background="#0FFFFFFF">
                 <StackPanel>
                     <TextBlock
                         FontSize="13"
