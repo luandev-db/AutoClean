@@ -83,7 +83,7 @@
                             Margin="14"
                             VerticalAlignment="Center"
                             RenderOptions.BitmapScalingMode="HighQuality"
-                            Source="pack://application:,,,/Resources/wpfui.png" />
+                            Source="pack://application:,,,/Resources/wpfui.png" Stretch="UniformToFill" />
                         <TextBlock
                             Grid.Row="0"
                             FontSize="16"

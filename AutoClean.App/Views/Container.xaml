@@ -1,5 +1,4 @@
 ﻿<ui:UiWindow
-    x:Class="AutoClean.App.Views.Container"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,6 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:pages="clr-namespace:AutoClean.App.Views.Pages"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:Serialization="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization.Xml"
+    x:Class="AutoClean.App.Views.Container"
     Title="Auto Clean"
     Width="1200"
     Height="654"
@@ -48,8 +49,7 @@
                 Navigated="RootNavigation_OnNavigated"
                 Precache="False"
                 SelectedPageIndex="-1"
-                TransitionDuration="200"
-                TransitionType="FadeInWithSlide">
+                TransitionDuration="200">
                 <ui:NavigationStore.Items>
                     <ui:NavigationItem
                         Cache="True"
@@ -141,7 +141,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            
+
             <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="-100,0,0,0">
                 <ui:ProgressRing IsIndeterminate="True" />
                 <TextBlock
@@ -157,6 +157,10 @@
         <!--
         <ui:NavigationView Grid.Row="1" Type="Compact" />
         -->
+
+        <!--  The title bar contains window navigation elements and some Tray related extras.  -->
+        <!--  You can put additional controls in the header, such as a search bar.  -->
+        <!--  <ui:TitleBar.Header />  -->
 
         <!--  Dialogue is above all controls except the navigation buttons. So it covers all the content, but allows you to close or move the application.  -->
         <ui:Dialog
@@ -179,10 +183,6 @@
             IsHitTestVisible="False"
             Visibility="Visible" Loaded="DebuggingLayer_Loaded" />
 
-        <!--  The title bar contains window navigation elements and some Tray related extras.  -->
-        <!--  You can put additional controls in the header, such as a search bar.  -->
-        <!--  <ui:TitleBar.Header />  -->
-
         <!--
             ButtonsForeground="Aqua"
             Foreground="Red"
@@ -194,7 +194,6 @@
             Icon="pack://application:,,,/Resources/favicon.png"
             MinimizeToTray="False"
             ShowHelp="False"
-            ShowClose="True"
             ShowMaximize="True"
             ShowMinimize="True"
             UseSnapLayout="True">

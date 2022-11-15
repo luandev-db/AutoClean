@@ -84,7 +84,7 @@ public partial class Container : INavigationWindow
     protected override void OnClosed(EventArgs e)
     {
         base.OnClosed(e);
-
+        
         // Make sure that closing this window will begin the process of closing the application.
         Application.Current.Shutdown();
     }
