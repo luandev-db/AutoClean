@@ -40,6 +40,7 @@ public partial class WindowsPage
     }
     public void DisableCortana(object sender, RoutedEventArgs e)
     {
+        
         ToggleSwitch toggleSwitch = sender as ToggleSwitch;
         string checkState;
         var Search = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search", true);
@@ -53,6 +54,8 @@ public partial class WindowsPage
             Search.SetValue("BingSearchEnabled", 0);
             Search.SetValue("CortanaConsent", 0);
             WindowsSearch.SetValue("AllowCloudSearch", 0);
+           
+            
         }
         else
         {
@@ -61,7 +64,7 @@ public partial class WindowsPage
             Search.SetValue("BingSearchEnabled", 1);
             Search.SetValue("CortanaConsent", 1);
             WindowsSearch.SetValue("AllowCloudSearch", 1);
-
+          
 
         }
 
@@ -70,9 +73,11 @@ public partial class WindowsPage
 
 
 
-    private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
+    public void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
     {
-
+       
+        
+        
     }
 }
        
