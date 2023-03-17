@@ -7,6 +7,8 @@ using System.IO;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Threading;
+using AutoClean.App.IOC.Repositorios;
+using AutoClean.App.IOC.Servicos;
 using AutoClean.App.Models;
 using AutoClean.App.Services;
 using AutoClean.App.Services.Contracts;
@@ -40,72 +42,9 @@ public partial class App
             // App Host
             services.AddHostedService<ApplicationHostService>();
 
-            // Theme manipulation
-            services.AddSingleton<IThemeService, ThemeService>();
-
-            // Taskbar manipulation
-            services.AddSingleton<ITaskBarService, TaskBarService>();
-
-            // Snackbar service
-            services.AddSingleton<ISnackbarService, SnackbarService>();
-
-            // Dialog service
-            services.AddSingleton<IDialogService, DialogService>();
-
-            // Tray icon
-            services.AddSingleton<INotifyIconService, CustomNotifyIconService>();
-
-            // Page resolver service
-            services.AddSingleton<IPageService, PageService>();
-
-            // Page resolver service
-            services.AddSingleton<ITestWindowService, TestWindowService>();
-
-            // Service containing navigation, same as INavigationWindow... but without window
-            services.AddSingleton<INavigationService, NavigationService>();
-
-            // Main window container with navigation
-            services.AddScoped<INavigationWindow, Views.Container>();
-            services.AddScoped<ContainerViewModel>();
-
-            // Views and ViewModels
-            services.AddScoped<Dashboard>();
-            services.AddScoped<DashboardViewModel>();
-
-            services.AddScoped<ExperimentalDashboard>();
-            services.AddScoped<ExperimentalViewModel>();
-
-            services.AddScoped<WindowsPage>();
-            services.AddScoped<ToggleSwitchViewModel>();
-
-            services.AddScoped<Menus>();
-
-            services.AddScoped<Colors>();
-            services.AddScoped<ColorsViewModel>();
-
-            services.AddScoped<Debug>();
-            services.AddScoped<DebugViewModel>();
-
-            services.AddScoped<Buttons>();
-            services.AddScoped<ButtonsViewModel>();
-
-            services.AddScoped<Data>();
-            services.AddScoped<DataViewModel>();
-
-            services.AddScoped<Input>();
-            services.AddScoped<InputViewModel>();
-
-            services.AddScoped<Icons>();
-            services.AddScoped<IconsViewModel>();
-
-            // Test windows
-            services.AddTransient<TaskManagerWindow>();
-            services.AddTransient<TaskManagerViewModel>();
-
-            services.AddTransient<EditorWindow>();
-            services.AddTransient<SettingsWindow>();
-            services.AddTransient<StoreWindow>();
-            services.AddTransient<ExperimentalWindow>();
+            // Services
+            services.RegistrarRepositorios();
+            services.RegistrarServicos();
 
             // Configuration
             services.Configure<AppConfig>(context.Configuration.GetSection(nameof(AppConfig)));

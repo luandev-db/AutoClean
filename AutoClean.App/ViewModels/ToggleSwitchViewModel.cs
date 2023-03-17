@@ -47,16 +47,26 @@ namespace AutoClean.App.ViewModels
                 else
                 {
                     ShowSnackbar();
+
                 }
+
+
             }
         }
-
-
-        private async void ShowSnackbar()
+        
+        private async Task ShowSnackbar()
         {
-            await _snackbarService.ShowAsync("The cake is a lie!", "The cake is a lie...", SymbolRegular.FoodCake24, ControlAppearance.Primary);
+            if (ShowSnackbarCommand == true)
+            {
+                await _snackbarService.ShowAsync("Cortana desativada", "Cortana desativada com sucesso...", SymbolRegular.WrenchScrewdriver20, ControlAppearance.Success);
+            }
+            else
+            {
+                await _snackbarService.ShowAsync("Cortana Ativada", "Serviços em segundo plano podem prejudicar o desempenho.", SymbolRegular.Warning24, ControlAppearance.Danger);
+            }
 
-            ShowSnackbar();
+
+            
         }
     }
 
