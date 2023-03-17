@@ -58,7 +58,7 @@ namespace AutoClean.App.ViewModels
         {
             if (ShowSnackbarCommand == true)
             {
-                await _snackbarService.ShowAsync("Cortana desativada", "Cortana desativada com sucesso...", SymbolRegular.WrenchScrewdriver20, ControlAppearance.Success);
+                await _snackbarService.ShowAsync("Cortana desativada", "Cortana desativada com sucesso...", SymbolRegular.WrenchScrewdriver20, ControlAppearance.Primary);
             }
             else
             {

@@ -39,4 +39,9 @@ public partial class WindowsPage
     public void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
     {
     }
+
+    private void CardControl_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
 }

@@ -174,5 +174,10 @@ public partial class Container : INavigationWindow
     {
 
     }
+
+    private void LottieAnimationView_SourceUpdated(object sender, System.Windows.Data.DataTransferEventArgs e)
+    {
+
+    }
 }
 
