@@ -54,7 +54,9 @@ namespace AutoClean.App.ViewModels
 
         private async void ShowSnackbar()
         {
-            await _snackbarService.ShowAsync("The cake is a lieee!", "The cake is a lie...", SymbolRegular.FoodCake24, ControlAppearance.Primary);
+            await _snackbarService.ShowAsync("The cake is a lie!", "The cake is a lie...", SymbolRegular.FoodCake24, ControlAppearance.Primary);
+
+            ShowSnackbar();
         }
     }
 
