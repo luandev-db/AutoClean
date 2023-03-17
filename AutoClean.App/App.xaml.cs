@@ -76,6 +76,7 @@ public partial class App
             services.AddScoped<ExperimentalViewModel>();
 
             services.AddScoped<WindowsPage>();
+            services.AddScoped<ToggleSwitchViewModel>();
 
             services.AddScoped<Menus>();
 

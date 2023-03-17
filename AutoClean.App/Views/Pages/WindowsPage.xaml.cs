@@ -19,6 +19,7 @@ using Wpf.Ui.Mvvm.Contracts;
 using AutoClean.App.Services;
 using System.IO;
 using Wpf.Ui.Common.Interfaces;
+using Wpf.Ui.Mvvm.Services;
 
 namespace AutoClean.App.Views.Pages;
 
@@ -27,25 +28,15 @@ namespace AutoClean.App.Views.Pages;
 /// </summary>
 public partial class WindowsPage
 {
-    public WindowsPage ViewModel
+    private readonly ISnackbarService _snackbarService;
+    public WindowsPage(ISnackbarService snackbarService)
     {
-        get;
+        InitializeComponent();
+        DataContext = new ToggleSwitchViewModel(snackbarService);
+        _snackbarService = snackbarService;
     }
-
-
-    public void DisableCortana(object sender, RoutedEventArgs e)
-    {
-
-        
-        
-       
-
-    }
-
-
 
     public void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
     {
-
     }
-}    
+}
