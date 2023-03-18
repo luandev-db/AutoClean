@@ -63,7 +63,7 @@
                     <ui:NavigationItem
                         Content="Windows"
                         Icon="WindowSettings20"
-                        PageType="{x:Type pages:Controls}" />
+                        PageType="{x:Type pages:WindowsPage}" />
                     <!--
                     <ui:NavigationHeader Icon="Fluent24" Text="Header" />
                     -->
@@ -148,7 +148,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
-                <ui:ProgressRing IsIndeterminate="True" />
+                <ProgressBar IsIndeterminate="True" />
                 <TextBlock
                     Margin="0,0,0,0"
                     FontSize="16"

@@ -32,7 +32,8 @@ public partial class WindowsPage
     public WindowsPage(ISnackbarService snackbarService)
     {
         InitializeComponent();
-        DataContext = new ToggleSwitchViewModel(snackbarService);
+        DataContext = new Cortana(snackbarService);
+        DataContext = new Xbox(snackbarService);
         _snackbarService = snackbarService;
     }
 

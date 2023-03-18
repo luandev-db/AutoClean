@@ -24,29 +24,29 @@ using Wpf.Ui.Mvvm.Services;
 
 namespace AutoClean.App.ViewModels
 {
-    public partial class ToggleSwitchViewModel : ObservableObject
+    public partial class Cortana : ObservableObject
     {
          
-        public ToggleSwitchViewModel(ISnackbarService snackbarService)
+        public Cortana(ISnackbarService snackbarService)
         {
             _snackbarService = snackbarService;
         }
 
         private readonly ISnackbarService _snackbarService;
-        private bool _showSnackbarCommand;
-        public bool ShowSnackbarCommand
+        private bool _cortanaCommand;
+        public bool CortanaCommand
         {
-            get { return _showSnackbarCommand; }
+            get { return _cortanaCommand; }
             set
             {
-                SetProperty(ref _showSnackbarCommand, value);
+                SetProperty(ref _cortanaCommand, value);
                 if (value)
                 {
-                    ShowSnackbar();
+                    CortanaSnackbar();
                 }
                 else
                 {
-                    ShowSnackbar();
+                    CortanaSnackbar();
 
                 }
 
@@ -54,9 +54,9 @@ namespace AutoClean.App.ViewModels
             }
         }
         
-        private async Task ShowSnackbar()
+        private async Task CortanaSnackbar()
         {
-            if (ShowSnackbarCommand == true)
+            if (CortanaCommand == true)
             {
                 await _snackbarService.ShowAsync("Cortana desativada", "Cortana desativada com sucesso...", SymbolRegular.WrenchScrewdriver20, ControlAppearance.Primary);
             }
