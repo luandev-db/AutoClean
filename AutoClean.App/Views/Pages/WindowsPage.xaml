@@ -5,9 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:ui="clr-namespace:Wpf.Ui.Controls;assembly=Wpf.Ui"
       xmlns:Models="clr-namespace:AutoClean.App.Models" xmlns:viewmodels="clr-namespace:AutoClean.App.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ToggleSwitchViewModel}" x:Class="AutoClean.App.Views.Pages.WindowsPage"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="WindowsPage">
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="WindowsPage" Height="606">
 
     <VirtualizingStackPanel
         x:Name="RootPanel"
@@ -28,7 +27,7 @@
             </Grid.ColumnDefinitions>
 
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Accessibility24"
+                            Icon="InprivateAccount24"
                             Grid.Column="0">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -47,7 +46,7 @@
                 <ui:ToggleSwitch IsChecked="{Binding ShowSnackbarCommand, Mode=TwoWay}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="BrainCircuit24"
                             Grid.Column="1">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -56,7 +55,7 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Economia de energia" />
+                        Text="Desempenho de energia" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
@@ -71,7 +70,7 @@
 
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="Print24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
@@ -81,17 +80,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Modo de jogo" />
+                        Text="Impressão" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Desempenho otimizado" />
+                        Text="Serviços de impressora" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="BookClock24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
@@ -101,16 +100,16 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Aero shake" />
+                        Text="Paginação" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Funcionalidade do Windows" />
+                        Text="Memoria Paginada" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
-            
+
         </Grid>
         <Grid Grid.Row="1" Margin="0,3,0,0">
             <Grid.ColumnDefinitions>
@@ -121,7 +120,7 @@
             </Grid.ColumnDefinitions>
 
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="XboxConsole24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
@@ -141,7 +140,7 @@
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="PrintAdd24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
@@ -151,11 +150,11 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Otimizações de tela cheia" />
+                        Text="Fax" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Correção tela cheia" />
+                        Text="Serviços do Fax" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
@@ -166,7 +165,7 @@
 
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="CalendarCancel24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
@@ -176,17 +175,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Windows Defender" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Antivírus integrado" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="ChatVideo24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
@@ -196,11 +195,11 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Bate Papo" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Chat do Windows" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
@@ -216,7 +215,7 @@
             </Grid.ColumnDefinitions>
 
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="Battery624"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
@@ -226,17 +225,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Energia" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Economia de energia" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="ArrowSwap24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
@@ -246,11 +245,11 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Telemetria" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Entrega de Telemetria" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
@@ -261,7 +260,7 @@
 
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="BookToolbox24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
@@ -271,17 +270,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Compactação" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Compactação do Windows " />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="ArrowClockwise24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
@@ -291,11 +290,11 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Restauração" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Ponto de restauração" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
@@ -311,7 +310,7 @@
             </Grid.ColumnDefinitions>
 
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="Games24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
@@ -321,17 +320,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Jogo" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Modo de jogo" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="ArrowAutofitDown24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
@@ -341,11 +340,11 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Windows Update" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Atualização automatica " />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
@@ -356,7 +355,7 @@
 
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="FStop24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
@@ -366,17 +365,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Prefetch" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Cache inteligente" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="CloudSync24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
@@ -386,11 +385,11 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="One Drive" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Sincronia em nuvem" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
@@ -406,7 +405,7 @@
             </Grid.ColumnDefinitions>
 
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="AppRecent24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
@@ -416,17 +415,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Aero Shake" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Windows Janelas" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="ContractDownLeft24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
@@ -436,11 +435,11 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Animação" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Animações do windows" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
@@ -451,7 +450,7 @@
 
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="SlideTransition24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
@@ -461,17 +460,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Transparência" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Janelas opacas" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
-                            Icon="Whiteboard24"
+                            Icon="DocumentSearch24"
                             Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
@@ -481,11 +480,201 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Cortana" />
+                        Text="Pesquisa" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Habilitar ou Desabilitar" />
+                        Text="Sugestões de pesquisa" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="False" />
+            </ui:CardControl>
+
+        </Grid>
+        <Grid Grid.Row="5" Margin="0,3,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Screenshot24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="0">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Tela cheia" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Otimização tela cheia" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="False" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="CalendarMultiple24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="1">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Superfetch" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Cache de aplicativos" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="False" />
+
+
+
+
+
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="AppFolder24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="2">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Menu Iniciar" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Menu rápido" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="False" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="DocumentHeartPulse24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="4">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Desfragmentação" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Defrag automatico" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="False" />
+            </ui:CardControl>
+
+        </Grid>
+        <Grid Grid.Row="6" Margin="0,3,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="CalendarArrowDown24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="0">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Smart Screen" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Desativa Smart Screen" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="False" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="DeleteOff24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="1">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="SysMain" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Cache do sistema" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="False" />
+
+
+
+
+
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="Status24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="2">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Recentes" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Recentes do Explorer" />
+                    </StackPanel>
+                </ui:CardControl.Header>
+                <ui:ToggleSwitch IsChecked="False" />
+            </ui:CardControl>
+            <ui:CardControl Margin="3,3,3,3"
+                            Icon="CommentNote24"
+                            Click="ToggleSwitch_Checked"
+                            Grid.Column="4">
+                <ui:CardControl.Header>
+                    <StackPanel 
+                        Grid.Column="0"
+                        VerticalAlignment="Center">
+                        <TextBlock
+                        FontSize="13"
+                        FontWeight="Medium"
+                        Text="Notificação" />
+                        <TextBlock
+                        FontSize="12"
+                        Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                        Text="Notificações do Windows" />
                     </StackPanel>
                 </ui:CardControl.Header>
                 <ui:ToggleSwitch IsChecked="False" />

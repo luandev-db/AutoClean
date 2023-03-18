@@ -48,7 +48,7 @@ namespace AutoClean.App.IOC.Servicos
             services.AddScoped<ExperimentalDashboard>();
             services.AddScoped<ExperimentalViewModel>();
 
-            services.AddScoped<WindowsPage>();
+            services.AddScoped<Controls>();
             services.AddScoped<ToggleSwitchViewModel>();
 
             services.AddScoped<Menus>();

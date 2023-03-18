@@ -63,7 +63,7 @@
                     <ui:NavigationItem
                         Content="Windows"
                         Icon="WindowSettings20"
-                        PageType="{x:Type pages:WindowsPage}" />
+                        PageType="{x:Type pages:Controls}" />
                     <!--
                     <ui:NavigationHeader Icon="Fluent24" Text="Header" />
                     -->
