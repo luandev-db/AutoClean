@@ -32,8 +32,7 @@ public partial class WindowsPage
     public WindowsPage(ISnackbarService snackbarService)
     {
         InitializeComponent();
-        DataContext = new Cortana(snackbarService);
-        DataContext = new Xbox(snackbarService);
+        DataContext = new ToggleSwitchViewModel(snackbarService);
         _snackbarService = snackbarService;
     }
 
@@ -43,6 +42,5 @@ public partial class WindowsPage
 
     private void CardControl_Click(object sender, RoutedEventArgs e)
     {
-
     }
 }

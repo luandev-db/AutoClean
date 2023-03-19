@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:ui="clr-namespace:Wpf.Ui.Controls;assembly=Wpf.Ui"
-      xmlns:Models="clr-namespace:AutoClean.App.Models" xmlns:viewmodels="clr-namespace:AutoClean.App.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:Xbox}" x:Class="AutoClean.App.Views.Pages.WindowsPage"
+      xmlns:Models="clr-namespace:AutoClean.App.Models" xmlns:viewmodels="clr-namespace:AutoClean.App.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ToggleSwitchViewModel}" x:Class="AutoClean.App.Views.Pages.WindowsPage"
       mc:Ignorable="d" d:DesignWidth="800"
       Title="WindowsPage" Height="606">
 

@@ -24,14 +24,14 @@ using Wpf.Ui.Mvvm.Services;
 
 namespace AutoClean.App.ViewModels
 {
-    public partial class Cortana : ObservableObject
+    public partial class ToggleSwitchViewModel : ObservableObject
     {
          
-        public Cortana(ISnackbarService snackbarService)
+        public ToggleSwitchViewModel(ISnackbarService snackbarService)
         {
             _snackbarService = snackbarService;
         }
-
+        #region Cortana
         private readonly ISnackbarService _snackbarService;
         private bool _cortanaCommand;
         public bool CortanaCommand
@@ -49,8 +49,6 @@ namespace AutoClean.App.ViewModels
                     CortanaSnackbar();
 
                 }
-
-
             }
         }
         
@@ -64,10 +62,44 @@ namespace AutoClean.App.ViewModels
             {
                 await _snackbarService.ShowAsync("Cortana Ativada", "Serviços em segundo plano podem prejudicar o desempenho.", SymbolRegular.Warning24, ControlAppearance.Danger);
             }
-
-
-            
         }
+        #endregion
+
+        #region Xbox
+        private bool _xboxCommand;
+        public bool XboxCommand
+        {
+            get { return _xboxCommand; }
+            set
+            {
+                SetProperty(ref _xboxCommand, value);
+                if (value)
+                {
+                    XboxSnackbar();
+                }
+                else
+                {
+                    XboxSnackbar();
+
+                }
+
+
+            }
+        }
+
+        private async Task XboxSnackbar()
+        {
+            if (XboxCommand == true)
+            {
+                await _snackbarService.ShowAsync("Xbox desativada", "Xbox desativada com sucesso...", SymbolRegular.WrenchScrewdriver20, ControlAppearance.Primary);
+            }
+            else
+            {
+                await _snackbarService.ShowAsync("Xbox Ativada", "Serviços em segundo plano podem prejudicar o desempenho.", SymbolRegular.Warning24, ControlAppearance.Danger);
+            }
+
+        }
+        #endregion
     }
 
 }
