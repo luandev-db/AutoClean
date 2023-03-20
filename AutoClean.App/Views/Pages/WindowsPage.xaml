@@ -6,19 +6,20 @@
       xmlns:ui="clr-namespace:Wpf.Ui.Controls;assembly=Wpf.Ui"
       xmlns:Models="clr-namespace:AutoClean.App.Models" xmlns:viewmodels="clr-namespace:AutoClean.App.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ToggleSwitchViewModel}" x:Class="AutoClean.App.Views.Pages.WindowsPage"
       mc:Ignorable="d" d:DesignWidth="800"
-      Title="WindowsPage" Height="606">
+      Title="WindowsPage" Height="592"
+    Scrollable="True" >
 
     <VirtualizingStackPanel
         x:Name="RootPanel"
-        Margin="18,18,18,18"
-        VirtualizingPanel.IsVirtualizing="True"
-        VirtualizingPanel.VirtualizationMode="Recycling">
+        Margin="18,0,18,18"
+        IsVirtualizing="True"
+        VirtualizationMode="Recycling" Height="574" VerticalAlignment="Bottom">
         <TextBlock
             Foreground="{DynamicResource TextFillColorSecondaryBrush}"
             Text="Essa tela é utilizada para fazer ajustes nas configurações do sistema operacional Windows."
             TextWrapping="WrapWithOverflow" />
 
-        <Grid Grid.Row="0" Margin="0,3,0,0">
+        <Grid Grid.Row="0" Margin="0,24,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -55,14 +56,14 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Desempenho de energia" />
+                        Text="Consumo de energia" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
                         Text="Limitação de energia" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding ConsumoEnergiaCommand}" />
 
 
 
@@ -71,7 +72,6 @@
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="Print24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -87,11 +87,10 @@
                         Text="Serviços de impressora" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding ImpressaoCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="BookClock24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -107,7 +106,7 @@
                         Text="Memoria Paginada" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding PaginacaoCommand}" />
             </ui:CardControl>
 
         </Grid>
@@ -121,7 +120,6 @@
 
             <ui:CardControl Margin="3,3,3,3"
                             Icon="XboxConsole24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -141,7 +139,6 @@
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="PrintAdd24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -157,7 +154,7 @@
                         Text="Serviços do Fax" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding FaxCommand}" />
 
 
 
@@ -166,7 +163,6 @@
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="CalendarCancel24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -182,11 +178,10 @@
                         Text="Antivírus integrado" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding WindowsDefenderCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="ChatVideo24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -202,7 +197,7 @@
                         Text="Chat do Windows" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding BatePapoCommand}" />
             </ui:CardControl>
 
         </Grid>
@@ -216,7 +211,6 @@
 
             <ui:CardControl Margin="3,3,3,3"
                             Icon="Battery624"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -232,11 +226,10 @@
                         Text="Economia de energia" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding EnergiaCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="ArrowSwap24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -252,7 +245,7 @@
                         Text="Entrega de Telemetria" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding TelemetriaCommand}" />
 
 
 
@@ -261,7 +254,6 @@
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="BookToolbox24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -277,11 +269,10 @@
                         Text="Compactação do Windows " />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding CompactacaoCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="ArrowClockwise24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -297,7 +288,7 @@
                         Text="Ponto de restauração" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding RestauracaoCommand}" />
             </ui:CardControl>
 
         </Grid>
@@ -311,7 +302,6 @@
 
             <ui:CardControl Margin="3,3,3,3"
                             Icon="Games24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -320,18 +310,17 @@
                         <TextBlock
                         FontSize="13"
                         FontWeight="Medium"
-                        Text="Jogo" />
+                        Text="Modo de jogo" />
                         <TextBlock
                         FontSize="12"
                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                        Text="Modo de jogo" />
+                        Text="Windows - Gamemode" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding ModoJogoCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="ArrowAutofitDown24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -347,7 +336,7 @@
                         Text="Atualização automatica " />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding WindowsUpdateCommand}" />
 
 
 
@@ -356,7 +345,6 @@
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="FStop24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -372,11 +360,10 @@
                         Text="Cache inteligente" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding PrefetchCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="CloudSync24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -392,7 +379,7 @@
                         Text="Sincronia em nuvem" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding OneDriveCommand}" />
             </ui:CardControl>
 
         </Grid>
@@ -406,7 +393,6 @@
 
             <ui:CardControl Margin="3,3,3,3"
                             Icon="AppRecent24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -422,11 +408,10 @@
                         Text="Windows Janelas" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding AeroShakeCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="ContractDownLeft24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -442,7 +427,7 @@
                         Text="Animações do windows" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding AnimacoesCommand}" />
 
 
 
@@ -451,7 +436,6 @@
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="SlideTransition24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -467,11 +451,10 @@
                         Text="Janelas opacas" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding TransparenciaCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="DocumentSearch24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -487,7 +470,7 @@
                         Text="Sugestões de pesquisa" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding PesquisaCommand}" />
             </ui:CardControl>
 
         </Grid>
@@ -501,7 +484,6 @@
 
             <ui:CardControl Margin="3,3,3,3"
                             Icon="Screenshot24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="0">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -517,11 +499,10 @@
                         Text="Otimização tela cheia" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding TelaCheiaCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="CalendarMultiple24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="1">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -537,7 +518,7 @@
                         Text="Cache de aplicativos" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding SuperfetchCommand}" />
 
 
 
@@ -546,7 +527,6 @@
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="AppFolder24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="2">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -562,11 +542,10 @@
                         Text="Menu rápido" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding MenuIniciarCommand}" />
             </ui:CardControl>
             <ui:CardControl Margin="3,3,3,3"
                             Icon="DocumentHeartPulse24"
-                            Click="ToggleSwitch_Checked"
                             Grid.Column="4">
                 <ui:CardControl.Header>
                     <StackPanel 
@@ -582,7 +561,7 @@
                         Text="Defrag automatico" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding DesfragmentacaoCommand}" />
             </ui:CardControl>
 
         </Grid>
@@ -596,8 +575,7 @@
 
             <ui:CardControl Margin="3,3,3,3"
                             Icon="CalendarArrowDown24"
-                            Click="ToggleSwitch_Checked"
-                            Grid.Column="0">
+                            Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Top">
                 <ui:CardControl.Header>
                     <StackPanel 
                         Grid.Column="0"
@@ -612,12 +590,11 @@
                         Text="Desativa Smart Screen" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding SmartScreenCommand}" />
             </ui:CardControl>
-            <ui:CardControl Margin="3,3,3,3"
+            <ui:CardControl Margin="3,3,3,0"
                             Icon="DeleteOff24"
-                            Click="ToggleSwitch_Checked"
-                            Grid.Column="1">
+                            Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top">
                 <ui:CardControl.Header>
                     <StackPanel 
                         Grid.Column="0"
@@ -632,17 +609,16 @@
                         Text="Cache do sistema" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding SysMainCommand}" />
 
 
 
 
 
             </ui:CardControl>
-            <ui:CardControl Margin="3,3,3,3"
+            <ui:CardControl Margin="3,3,3,0"
                             Icon="Status24"
-                            Click="ToggleSwitch_Checked"
-                            Grid.Column="2">
+                            Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Top">
                 <ui:CardControl.Header>
                     <StackPanel 
                         Grid.Column="0"
@@ -657,12 +633,11 @@
                         Text="Recentes do Explorer" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding RecentesCommand}" />
             </ui:CardControl>
-            <ui:CardControl Margin="3,3,3,3"
+            <ui:CardControl Margin="3,3,3,0"
                             Icon="CommentNote24"
-                            Click="ToggleSwitch_Checked"
-                            Grid.Column="4">
+                            Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Top">
                 <ui:CardControl.Header>
                     <StackPanel 
                         Grid.Column="0"
@@ -677,7 +652,7 @@
                         Text="Notificações do Windows" />
                     </StackPanel>
                 </ui:CardControl.Header>
-                <ui:ToggleSwitch IsChecked="False" />
+                <ui:ToggleSwitch IsChecked="{Binding NotificacaoCommand}" />
             </ui:CardControl>
 
         </Grid>
