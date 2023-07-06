@@ -10,8 +10,8 @@ AutoClean é um aplicativo de ajustes de desempenho destinado ao Windows
 
 Contribuições são sempre bem-vindas! Aqui estão as maneiras pelas quais você pode contribuir:
 
-- [Reportando bugs](https://github.com/luansilvadb/stream-pedro/issues)
-- [Sugerindo melhorias](https://github.com/luansilvadb/stream-pedro/issues)
+- [Reportando bugs](https://github.com/luansilvadb/AutoClean/issues)
+- [Sugerindo melhorias](https://github.com/luansilvadb/AutoClean/issues)
 
 ### Reportando Bugs
 
